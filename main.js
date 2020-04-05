@@ -60,7 +60,6 @@ const view = {
   },
   showPage() {
     model.getSpecificData()
-
     let htmlContent = ''
     if (data.specificData.length === 0) {
       document.querySelector('#cards').innerHTML = `
@@ -101,10 +100,8 @@ const controller = {
 }
 
 controller.pageInit()
-
 document.querySelector('.list-group').addEventListener('click', () => {
   // console.log(event.target.dataset.id)
   status = Number(event.target.dataset.id)
   view.showPage()
 })
-
