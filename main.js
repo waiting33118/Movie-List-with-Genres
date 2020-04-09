@@ -31,7 +31,7 @@ const data = {
 const model = {
   getMoviesData() {
     axios
-      .get(`${data.API_URL}/movies`)
+      .get(`${data.API_URL}movies`)
       .then((res) => {
         data.moviesData.push(...res.data.results)
         view.showPage()
